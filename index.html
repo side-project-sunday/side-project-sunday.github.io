@@ -47,13 +47,35 @@
 			
         }
     </style>
-    <title></title>
-    <body>
-            <div id='inner'>
-                <h1>Side Project Sunday</h1>
-                <p> <span> <a href='https://goo.gl/maps/eKEEQNmkiJ12' >Mapzen, 30 W 26th St, New York, NY 10010</a></span> <span>|</span> <span> 
-                    <span>11th June 2017, 11am-7pm</span></p>
-                <a href='http://blog.sideprojectsunday.com'>Previous Side Project Sundays</a></span></p>
-            </div>
-    </body>
+    <title>Side Project Sunday</title>
 </head>
+<body>
+    <div id='inner'>
+        <h1>Side Project Sunday</h1>
+        <p>
+            <span id="location"></span> <span>|</span> <span>2nd July 2017, 11am-7pm</span>
+        </p>
+        <p>
+            <span><a href='http://blog.sideprojectsunday.com'>Previous Side Project Sundays</a></span>
+        </p>
+    </div>
+</body>
+
+<script>
+var places = {
+    "mapzen":{
+        "header": "Mapzen, 30 W 26th St, New York, NY 10010",
+        "map_url": "https://goo.gl/maps/eKEEQNmkiJ12"
+    },
+    "carto":{
+        "header": "Carto, 201 Moore St, Brooklyn, NY 11206",
+        "map_url": "https://goo.gl/maps/ZyrRrXYEDbE2"
+    }
+}
+function setLocation(loc){
+    document.getElementById("location").innerHTML = "<a href='" + loc.map_url + "'>" + loc.header + "</a>";
+}
+
+setLocation(places.carto);
+
+</script>
