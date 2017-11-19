@@ -53,7 +53,7 @@
     <div id='inner'>
         <h1>Side Project Sunday</h1>
         <p>
-            <span id="location"></span> <span>|</span> <span>2nd July 2017, 11am-7pm</span>
+            <span id="location"></span> <span>|</span> <span>26th Nov 2017, 11am-7pm</span>
         </p>
         <p>
             <span><a href='http://blog.sideprojectsunday.com'>Previous Side Project Sundays</a></span>
@@ -71,11 +71,15 @@ var places = {
         "header": "Carto, 201 Moore St, Brooklyn, NY 11206",
         "map_url": "https://goo.gl/maps/ZyrRrXYEDbE2"
     }
+    "local":{
+        "header": "61 Local, 61 Bergen St, Brooklyn, NY 11201",
+        "map_url": "https://goo.gl/maps/x225UGg4QiM2"
+    }
 }
 function setLocation(loc){
     document.getElementById("location").innerHTML = "<a href='" + loc.map_url + "'>" + loc.header + "</a>";
 }
 
-setLocation(places.carto);
+setLocation(places.local);
 
 </script>
